@@ -1,0 +1,242 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\definecolor{deepnavy}{RGB}{25, 114, 120}
+\definecolor{mutedsage}{RGB}{193, 41, 46}
+\definecolor{warmterracotta}{RGB}{59, 40, 204}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=deepnavy,  % Color for internal links (sections, etc.)
+    citecolor=mutedsage, % Color for citation links
+    urlcolor=warmterracotta % Color for URLs
+}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\skillItem}[3]{
+    \vspace{-2pt}\item
+        \begin{tabular*}{0.95\textwidth}[t]{l@{\extracolsep{\fill}}r}
+            \textbf{#1} & #2 \\
+            \small #3
+        \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\datedResumeItem}[2]{
+  \item
+    \begin{tabular*}{0.925\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        #1 & \small#2
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\eduSubheading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Large \scshape Tom Cassar}
+
+\vspace{5pt}
+\small \href{https://www.github.com/tcassar}{www.github.com/tcassar} $|$
+\href{https://www.linkedin.com/in/tom-cassar}{www.linkedin.com/in/tom-cassar} $|$
+\href{mailto:cassar.thomas.e@gmail.com}{cassar.thomas.e@gmail.com} 
+
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {B.Sc. Computer Science}{Sept. 2022 -- Jun. 2025}
+      {University of Manchester}{United Kingdom}
+      \resumeItemListStart
+         \resumeItem{First Year \textbf{80\%}, Second Year \textbf{77\%} (First Class).}
+         
+         \resumeItem{Algorithms and Data Structures, Distributed Systems, System Architecture, Operating Systems, Machine Learning, Cyber Security, Chip Multiprocessors.}
+      \resumeItemListEnd
+
+    \eduSubheading
+      {Hampton School}{Sept. 2017 -- Jul. 2022}
+      \resumeItemListStart
+         \resumeItem{Further Maths, Chemistry, Computer Science, Maths at \textbf{A*A*A*A*}.}
+         \resumeItem{10 GCSEs all at \textbf{Grade 9}.}
+      \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+
+\section{Experience}
+  \resumeSubHeadingListStart
+  
+    \resumeSubheading
+      {Netcraft - Android Malware Sandbox Team}{Jul. 2024 -- Sept. 2024}
+      {Software Engineering Intern. \href{https://www.netcraft.com}{www.netcraft.com}}{Manchester, United Kingdom}
+      \resumeItemListStart    
+        \resumeItem{\textbf{Reverse engineered} the protocol that the \emph{EagleSpy} Android malware family uses to communicate with \textbf{Command and Control servers}. Mimicked requests made by infected devices to extract attacker's techniques and procedures, enabling takedowns.}
+        
+        \resumeItem{\textbf{Improved sandbox coverage} by deploying 5 static analysis rules spanning the \emph{Copybara}, \emph{EagleSpy}, and \emph{Godfather} malware families. The \emph{Godfather} rule reduced classification false negative rate 7\% and increased true positive rate 11\%.}
+        
+        \vspace{-10pt}
+        
+        \resumeItem{\textbf{Tracked classification performance} of Netcraft's Android Malware sandbox. System analysed 250 APKs up to once a day; results and metrics visualised with Grafana. Led to smarter, data-driven decisions about which families to support.}
+
+        \vspace{-10pt}
+        
+        \resumeItem{\textbf{Collaborated across teams} to build an app logo classification model. Extracted and cleaned 2,100 app logo icons from 500 APKs.}
+    \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \eduSubheading
+      {Fine-Grained System Call Filtering - \normalfont{\textit{Final Year Project}}}{Sept. 2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{
+            Developed an \textbf{\texttt{strace}-like analysis tool} in \textbf{eBPF} and \textbf{Go} to study \textbf{syscall invocation patterns} across dynamically linked libraries, revealing that different libraries invoked distinct sets of syscalls.
+        }
+        \resumeItem{
+            Designed a \textbf{fine-grained syscall filtering mechanism} based on process address space, enabling per-library filtering. Motivated by results from analysis tool: \textbf{37.0\% privilege reduction for Redis} and \textbf{23.7\% for Nginx} (worst case).
+        }
+        \resumeItem{\textbf{Implemented a proof-of-concept} using \textbf{eBPF} to dynamically apply syscall whitelists to running processes. Highly configurable via a CLI (written in Go).
+        }
+        \resumeItem{Published source code and results under MIT Licence at \href{https://www.github.com/tcassar-diss}{www.github.com/tcassar-diss}.}
+        
+      \resumeItemListEnd
+
+    \eduSubheading{Optimising Matrix Multiplication}{Apr. 2024}
+        \resumeItemListStart
+            \resumeItem{\textbf{Investigated architecture} of i7-8550U by optimising naive `schoolbook' matrix multiplication in C.}
+        
+            \resumeItem{Plotted \textbf{throughput} (in floating point operations per second) against matrix dimension for different optimisations, selecting test values using \textbf{knowledge of underlying architecture} (e.g. cache line size, core count).}
+        
+            \resumeItem{Achieved a \textbf{speedup of 1000x} using `Single Instruction, Multiple Data', tiling, multi-core, and loop collapsing.}
+    \resumeItemListEnd
+      
+    \eduSubheading
+      {Autotrader Machine Learning Hackathon Win}{Mar. 2024}
+      \resumeItemListStart
+        \resumeItem{\textbf{Predicted a car's time to sell} on AutoTrader using 225,000 rows of data with a root mean squared error of 21 days.}
+        
+        \resumeItem{Explored data to inform data \textbf{cleaning, wrangling, and feature engineering}. Produced clear visualisations which highlighted subtle trends in data, revealing a source of data leakage which others did not find.}
+        
+        \resumeItem{Experimented with \textbf{Random Forests}, \textbf{Decision Trees} and \textbf{Artificial Neural Networks}. Plotted graphs comparing model performance with \texttt{matplotlib} and \texttt{seaborn} to inform model selection.}
+        
+        \resumeItem{\textbf{Presented} data processing pipeline and results to \textbf{ML engineers at AutoTrader}.}
+    \resumeItemListEnd
+
+    \eduSubheading
+    {Sony Hackathon Win - IRIS}{Jun. 2023}
+      \resumeItemListStart
+        \resumeItem{Created device to aid visually impaired users by \textbf{describing the surrounding environment in realtime}.}
+        
+        \resumeItem{Implemented a \textbf{containerised backend service} which used the Google Cloud API, and OpenAI's GPT3.5 API.}
+        
+        \resumeItem{Designed a \textbf{bespoke low level communication protocol} between the Spresence board and the backend over sockets.}
+        \vspace{-10pt}
+        \resumeItem{Presented design to a panel of industry judges, defended design decisions, and placed first out of 140 students.}
+    \resumeItemListEnd
+        
+  \resumeSubHeadingListEnd
+
+
+\section{Awards and Leadership}
+    \resumeItemListStart
+        \skillItem{Career Mentoring}{Sept. 2024 - Nov. 2024}{Advised Second Year students with job search strategies, CV reviews, and mock interviews.}
+        \skillItem{\textbf{Bloomberg BPuzzled}}{Nov. 2023, Apr. 2024}{\textbf{Won} BPuzzled Manchester. Qualified for and competed in the BPuzzled Global Finals in London.}
+        \skillItem{\textbf{Cambridge Chemistry Challenge Gold Award}}{Jul. 2021, Feb. 2022}{Qualified for, and placed 6th out of 60, in the Cambridge Chemistry Race.}
+        \skillItem{Rowing Coxswain}{Sept. 2017 - Jul. 2021}{\textbf{Leadership}, \textbf{cooperation}, \textbf{interpersonal} and \textbf{organisational skills}.}
+    \resumeItemListEnd
+
+\section{Tools}
+    \resumeItemListStart
+        \resumeItem{Go, Python, C, BPF, C++, Linux, Docker, git, Java, PHP, PostgreSQL, Haskell, Bash, \LaTeX.}{}
+    \resumeItemListEnd
+
+\end{document}
