@@ -7,4 +7,4 @@ refresh:
 clean:
 	latexmk -C
 
-.PHONY: refresh clean
+.PHONY: pdf refresh clean
